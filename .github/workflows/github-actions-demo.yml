@@ -1,10 +1,9 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push]
-jobs:
-  Explore-GitHub-Actions:
+Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: sh run.sh
+      - run: ./run.sh
+      - run: run.sh
       - run: echo "i hope this works"
       - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
