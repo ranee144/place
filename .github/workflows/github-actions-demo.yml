@@ -8,5 +8,3 @@ jobs:
       - run: sh run.sh
       - run: echo "i hope this works"
       - name: List files in the repository
-        run: |
-          ls ${{ github.workspace }}
