@@ -5,4 +5,4 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-20.04
     steps:
-      - run: sh ./main.sh
+      - run: sh .github/workflows/main.sh
