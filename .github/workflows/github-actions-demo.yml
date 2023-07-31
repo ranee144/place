@@ -5,7 +5,7 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: ./run.sh
+      - run: run.sh
       - run: echo "i hope this works"
       - name: List files in the repository
         run: |
