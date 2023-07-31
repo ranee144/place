@@ -1,9 +1,17 @@
-Explore-GitHub-Actions:
+name: template
+
+on:
+  push:
+    branches: [ $default-branch ]
+  pull_request:
+    branches: [ $default-branch ]
+
+jobs:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - run: ./run.sh
-      - run: run.sh
-      - run: echo "i hope this works"
-      - name: List files in the repository
-        run: |
-          ls ${{ github.workspace }}
+      - uses: actions/checkout@v3
+
+      - name: Run a one-line script
+        run: sh ./run.sh
